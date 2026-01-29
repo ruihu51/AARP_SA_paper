@@ -37,7 +37,7 @@ p_ij.1.3 <- matrix(c(true_prob, false_prob/2, 0, 0, 0, 0,
                      0, 0, 0, false_prob/2, true_prob, false_prob,
                      0, 0, 0, 0, false_prob/2, true_prob), nrow = 6, byrow = TRUE)
 dimnames(p_ij.1.3) <- list(levels(aarp_data$SMOKE_DOSE), levels(aarp_data$SMOKE_DOSE))
-p_ij.1.3 <- build.mc.matrix(p_ij.1.3, method = "jlt") # not random did twice
+p_ij.1.3 <- build.mc.matrix(p_ij.1.3, method = "jlt") # do it until the output of the next command is TRUE
 check.mc.matrix(list(p_ij.1.3))
 
 # asym 1 mild
