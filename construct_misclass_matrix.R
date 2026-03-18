@@ -127,6 +127,10 @@ p_ij.4.3 <- matrix(c(row[1],row[2:6],
 check.mc.matrix(list(p_ij.4.3))
 dimnames(p_ij.4.3) <- list(levels(aarp_data$SMOKE_DOSE), levels(aarp_data$SMOKE_DOSE))
 
+#########################
+# generate 9 misclassification matrices for health status
+########################
+
 # sym 1 mild
 true_prob <- 0.8
 false_prob <- 1 - true_prob
